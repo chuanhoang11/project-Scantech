@@ -1,0 +1,103 @@
+.banner {
+  background-image: url("../../assets/images/bg_banner.png");
+  //   height: 149.2422rem;
+  min-height: 70.367vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // position: relative;
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-item {
+    width: 50%;
+    padding: 0 1.2rem;
+    margin-bottom: 2.4rem;
+    // @include max(639.9px) {
+    //   width: 100%;
+    // }
+  }
+  &-content {
+    padding: 0 0 5rem 8rem;
+    @include max(1070px) {
+      padding: 0;
+    }
+    // height: 50rem;
+    &-title {
+      width: 60rem;
+      font-size: 6.4rem;
+      font-weight: 700;
+      color: $color-pri;
+      line-height: 6rem;
+      @include max(1240px) {
+        font-size: 4rem;
+        width: 40rem;
+      }
+      @include max(800px) {
+        width: 30rem;
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+    &-subTitle {
+      @include max(1070px) {
+        width: 30rem;
+      }
+      @include max(599.9px) {
+        width: 20rem;
+        font-size: 1.4rem;
+      }
+      @include max(499.9px) {
+        width: 18rem;
+        font-size: 1.2rem;
+      }
+      width: 47.5rem;
+      margin: 2.4rem 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $color-text;
+    }
+    &-btn {
+      @include btn;
+      padding: 1.5rem 3rem;
+      @include max(499.9px) {
+        padding: 0.5rem 0.2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .mySwiper {
+    margin: 2.4rem auto;
+    width: 60.8rem;
+    height: 10.1rem;
+    box-shadow: 0px 5px 19px 0px rgba(51, 51, 51, 0.3);
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    // position: absolute;
+    // left: 5.5%;
+    // bottom: 25%;
+    @include max(620px) {
+      width: 42rem;
+      height: 10rem;
+    }
+    @include max(499.9px) {
+      width: 10rem;
+      padding: 2rem;
+      margin: 1.2rem auto;
+      height: 9rem;
+    }
+    .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+      cursor: pointer;
+    }
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}

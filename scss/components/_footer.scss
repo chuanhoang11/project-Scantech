@@ -1,0 +1,181 @@
+.footer {
+  background-color: $color-pri;
+  color: $color-white;
+  &-main {
+    padding: var(--pd-sc) 0;
+    @include max(842px) {
+      padding: 4rem 0;
+    }
+  }
+  &-top {
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
+  .dsmall {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.2rem;
+    margin-bottom: -2.4rem;
+    &-item {
+      padding: 0 1.2rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+  &-col {
+    width: 50%;
+    @include max(842px) {
+      width: 100%;
+    }
+  }
+  &-logo {
+    display: flex;
+    width: 33.6rem;
+    @include transitionRe;
+    margin-bottom: 2.4rem;
+    @include max(499.9px) {
+      width: 25rem;
+    }
+  }
+  &-contact {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+      .text {
+        font-size: 1.2rem;
+        font-weight: 400;
+        @include transitionRe;
+        &:hover {
+          color: $color-third;
+        }
+      }
+    }
+  }
+  &-email {
+    display: flex;
+    flex-wrap: wrap;
+    .text-email {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.8rem;
+    }
+  }
+  &-form {
+    &-label {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    &-inputBtn {
+      margin-top: 0.8rem;
+      margin-bottom: 2.4rem;
+      display: flex;
+      .form {
+        &-input {
+          padding: 0 1.6rem;
+          border-radius: 1rem 0 0 1rem;
+          width: 34.8rem;
+          height: 5rem;
+          outline: none;
+          border: none;
+        }
+        &-btn {
+          padding: 0.8rem 3.2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $color-text;
+          border-radius: 0 1rem 1rem 0;
+          height: 5rem;
+          color: $color-white;
+          font-weight: 700;
+          font-size: 1.6rem;
+          font-family: "Montserrat";
+          @include max(499.9px) {
+            padding: 0.8rem 1.2rem;
+          }
+          @include transitionRe;
+          &:hover {
+            background-color: $color-pri2;
+          }
+        }
+      }
+    }
+  }
+  &-nav {
+    .menu {
+      &-item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2.4rem;
+      }
+      &-link {
+        font-size: 1.6rem;
+        font-weight: 400;
+        transition: all 0.5s;
+        &:hover {
+          color: $color-third;
+        }
+        &:not(:first-child) {
+          margin-left: 2.4rem;
+        }
+      }
+    }
+  }
+  &-follow {
+    &-text {
+      margin-bottom: 2.4rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    &-internet {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .internet-item {
+        &:not(:first-child) {
+          margin-left: 1.6rem;
+        }
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 10rem;
+        .fa-brands {
+          width: inherit;
+          height: inherit;
+          padding: 0.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .item {
+        &-facebook {
+          background-color: $color-fb;
+        }
+        &-ins {
+          background-image: $color-ins;
+        }
+        &-twitter {
+          background-color: $color-twitter;
+        }
+        &-youtube {
+          background-color: $color-youtube;
+        }
+      }
+    }
+  }
+  &-copyRight {
+    padding-top: 4rem;
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    @include max(559.9px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2.4rem;
+    }
+  }
+}

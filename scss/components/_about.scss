@@ -1,0 +1,137 @@
+.sec-about {
+  background: linear-gradient(
+    0deg,
+    #f4f4f4 55.33%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  background-image: url("../../assets/images/bg_banner.png");
+  //   height: 149.2422rem;
+  min-height: 70.367vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem 0;
+}
+
+.about {
+  .container {
+    max-width: 172.8rem;
+  }
+  &-content {
+    margin: 0 auto;
+    margin-top: -25rem;
+    // width: 140.8rem;
+    // height: 88.2rem;
+    min-height: calc(882 / 1408 * 100vw);
+    background-color: #151515;
+    box-shadow: 0px 4px 19px 0px rgba(51, 51, 51, 0.3);
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    @include max(1500px) {
+      margin-top: 0;
+    }
+    // transform: translateX(50%);
+    &-text {
+      position: absolute;
+      transform: translate(-6%, -39%);
+      top: 50%;
+      left: 50%;
+      @include max(940px) {
+        transform: translate(-50%, -39%);
+      }
+      @include max(867px) {
+        transform: translate(-38%, -39%);
+      }
+      @include max(500px) {
+        transform: translate(-47%, -50%);
+      }
+    }
+  }
+  &-bg {
+    // padding-top: calc(882 / 1408 * 100vw);
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-left,
+  &-right {
+    position: absolute;
+    top: 30%;
+    @include max(500px) {
+      display: none;
+    }
+  }
+  &-left {
+    left: 0;
+  }
+  &-right {
+    right: 0;
+  }
+  &-hand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &-main {
+    position: relative;
+  }
+  &-title {
+    color: $color-pri;
+    font-size: 6.4rem;
+    font-weight: 700;
+    opacity: 0.8;
+    @include max(867px) {
+      font-size: 4rem;
+    }
+    @include max(500px) {
+      font-size: 2.5rem;
+    }
+  }
+  &-text {
+    width: 50rem;
+    font-size: 6.4rem;
+    font-weight: 700;
+    color: $color-white;
+    position: absolute;
+    top: 34%;
+    @include max(867px) {
+      font-size: 4rem;
+    }
+    @include max(500px) {
+      font-size: 2.5rem;
+    }
+  }
+  &-subTitle {
+    width: 40rem;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 2.4rem 0;
+    @include max(600px) {
+      width: 28rem;
+      font-size: 1.2rem;
+      margin: 1.2rem 0;
+    }
+  }
+  &-btn {
+    @include btn;
+    @include max(500px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

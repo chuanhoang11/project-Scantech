@@ -1,0 +1,268 @@
+.product {
+  padding: 8rem 0;
+  margin-top: -20rem;
+  position: relative;
+  // overflow: hidden;
+  @include max(1500px) {
+    margin-top: 0;
+    // overflow: hidden;
+  }
+  &-bg {
+    background-image: url("../../assets/images/bg_banner.png");
+    //   height: 149.2422rem;
+    min-height: 70.367vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -90%;
+    width: 100%;
+    z-index: -1;
+    @include max(740px) {
+      display: none;
+    }
+  }
+  // .container {
+  //   max-width: 172.8rem;
+  // }
+  &-title {
+    font-size: 6.4rem;
+    color: $color-pri;
+    font-weight: 700;
+    text-align: center;
+    @include max(740px) {
+      font-size: 4rem;
+    }
+    @include max(500px) {
+      font-size: 2.4rem;
+    }
+  }
+  &-details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    --col-gap: 2rem;
+    --row-gap: 2rem;
+    margin: 0 calc(var(--col-gap) / 2 * -1);
+    margin-bottom: calc(var(--row-gap) * -1);
+  }
+  &-item {
+    padding: 0 calc(var(--col-gap) / 2);
+    margin-bottom: var(--row-gap);
+  }
+  .item {
+    &-one {
+      width: calc(3 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((373 / 337) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-two {
+      width: calc(6 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((373 / 694) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-three {
+      width: calc(3 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((373 / 337) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-four {
+      width: calc(5 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((334 / 575) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-five {
+      width: calc(3 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((334 / 337) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-six {
+      width: calc(4 / 12 * 100%);
+      @include max(740px) {
+        width: calc(12 / 12 * 100%);
+      }
+      .product-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        padding-top: calc((334 / 456) * 100%);
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &-wrap {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      .product-text {
+        bottom: 0;
+      }
+      .product-wrap-title {
+        top: 50%;
+      }
+    }
+    &-title {
+      position: absolute;
+      top: 2000%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: all 0.5s;
+      @include max(992px) {
+        position: static;
+        transform: translate(0, 0);
+      }
+      .product-textCenter {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $color-white;
+        margin-bottom: 1.6rem;
+        @include max(1240px) {
+          font-size: 2rem;
+        }
+        @include max(992px) {
+          margin-top: 1.2rem;
+          font-size: 1.6rem;
+          color: $color-text;
+        }
+      }
+      .product-subText {
+        width: 57.9rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-white;
+        @include max(1240px) {
+          font-size: 1.4rem;
+          width: 40rem;
+        }
+        @include max(992px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &-text {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    color: $color-white;
+    position: absolute;
+    bottom: -100%;
+    left: 20%;
+    transition: all 0.5s;
+    @include max(1240px) {
+      font-size: 2rem;
+    }
+    @include max(1140px) {
+      position: absolute;
+      left: 10%;
+      font-size: 1.6rem;
+    }
+    @include max(992px) {
+      margin-top: 1.2rem;
+      position: static;
+      transform: translate(0, 0);
+      color: $color-text;
+      font-size: 1.4rem;
+    }
+  }
+
+  &-btn {
+    margin-top: 2.4rem;
+    @include btn;
+  }
+}

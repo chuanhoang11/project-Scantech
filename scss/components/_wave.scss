@@ -1,0 +1,17 @@
+.bg-wave {
+  min-height: calc(504 / 2588 * 100vw);
+  position: relative;
+  margin-top: -22rem;
+  @include max(1000px) {
+    display: none;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

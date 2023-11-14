@@ -1,0 +1,95 @@
+.service {
+  padding: 8rem 0;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    #f4f4f4 42.99%,
+    rgba(217, 217, 217, 0) 95.66%
+  );
+  margin-top: -90rem;
+  @include max(1240px) {
+    margin-top: -35rem;
+  }
+  @include max(858px) {
+    margin-top: -30rem;
+  }
+  @include max(767px) {
+    margin-top: 0;
+    padding: 2rem 0;
+  }
+  &-title {
+    @include mainTitle;
+    margin-bottom: 4rem;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6.4rem;
+    margin-bottom: 2.4rem;
+    &-title {
+      font-size: 1.8rem;
+      color: $color-pri;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+  }
+  &-top {
+    display: flex;
+    gap: 2.9rem;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &-center {
+    margin: 2.4rem 0;
+  }
+  .input {
+    &-firstName,
+    &-lastName {
+      padding: 0 1.6rem;
+      width: 30rem;
+      height: 5.6rem;
+      outline: none;
+      border: 1px solid transparent;
+      @include max(656px) {
+        width: 23.6rem;
+      }
+      @include max(522px) {
+        width: 13.5rem;
+      }
+    }
+    &-email {
+      width: 63.2rem;
+      height: 5.6rem;
+      padding: 0 1.6rem;
+      outline: none;
+      border: 1px solid transparent;
+      @include max(656px) {
+        width: 50rem;
+      }
+      @include max(522px) {
+        width: 30rem;
+      }
+    }
+    &-mess {
+      width: 63.2rem;
+      height: 13rem;
+      padding: 1.6rem;
+      outline: none;
+      border: 1px solid transparent;
+      @include max(656px) {
+        width: 30rem;
+      }
+      @include max(522px) {
+        width: 30rem;
+      }
+    }
+  }
+  &-btn {
+    @include btn;
+  }
+}
