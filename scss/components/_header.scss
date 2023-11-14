@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 99;
   transition: all 0.5s;
+  // sticky
   &.sticky {
     height: 7rem;
     .megas,
