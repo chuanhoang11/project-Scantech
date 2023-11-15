@@ -1,164 +1,162 @@
 .megas {
-    @include posi-horizontal;
-    position: fixed;
-    top: var(--size-hd);
-    width: 128rem;
-    max-width: 100%;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 2.4rem;
-    overflow: hidden;
-    max-height: calc(100vw - var(--size-hd));
-    overflow: hidden auto;
-    transition: .2s $cubic;
-    opacity: 0;
-    visibility: hidden;
-    @include tranform(translate(-50%, -1rem));
-    z-index: -1;
-    background-color: white ;
-    --transition: .2s $cubic;
-    &-item {
-        padding: 2.4rem 4rem;
-        border-radius: inherit;
-        @include flex-wr;
-        align-items: center;
-        gap: 2.4rem;
-        position: relative;
-        transition: var(--transition);
+  @include posi-horizontal;
+  position: fixed;
+  top: var(--size-hd);
+  width: 128rem;
+  max-width: 100%;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 2.4rem;
+  overflow: hidden;
+  max-height: calc(100vw - var(--size-hd));
+  overflow: hidden auto;
+  transition: 0.2s $cubic;
+  opacity: 0;
+  visibility: hidden;
+  @include tranform(translate(-50%, -1rem));
+  z-index: -1;
+  background-color: white;
+  --transition: 0.2s $cubic;
+  &-item {
+    padding: 2.4rem 4rem;
+    border-radius: inherit;
+    @include flex-wr;
+    align-items: center;
+    gap: 2.4rem;
+    position: relative;
+    transition: var(--transition);
 
-        @include hover {
-            background-color: $color-pri;
+    @include hover {
+      background-color: $color-pri;
 
-            .megas-content {
-                color: white;
-
-                .icon {
-                    background-color: white;
-
-                    i {
-                        color: $color-pri;
-                    }
-                }
-            }
-
-            .megas-menu-item {
-                color: white;
-                
-
-                i {
-                    color: $color-pri;
-                    background-color: $color-white;
-                }
-            }
-        }
-
-        &:not(:last-child) {
-            &::after {
-                @include pseudo;
-                bottom: 0;
-                left: 4rem;
-                right: 4rem;
-                height: .1rem;
-                background-color: $color-border-01;
-            }
-        }
-    }
-
-    &-left {
-        width: calc((4/12 * 100%) - (2.4rem - (2.4rem / 2)));
-    }
-
-    &-right {
-        width: calc((8/12 * 100%) - (2.4rem - (2.4rem / 2)));
-    }
-
-    &-content {
-        @include flex-wr;
-        gap: 1.6rem;
-        
+      .megas-content {
+        color: white;
 
         .icon {
-            width: 3.2rem;
-            height: 3.2rem;
-            border-radius: 100rem;
-            background-color: $color-pri;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            i {
-                color: $color-white;
-            }
-        }
+          background-color: white;
 
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+          i {
+            color: $color-pri;
+          }
         }
+      }
 
-        .name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            transition: var(--transition);
+      .megas-menu-item {
+        color: white;
 
-            @include hover {
-                color: $color-third;
-            }
+        i {
+          color: $color-pri;
+          background-color: $color-white;
         }
-
-        .des {
-            font-size: 1.4rem;
-            transition: var(--transition);
-        }
+      }
     }
 
-    &-menu {
-        &-list {
-            @include flex-wr;
-            gap: 2.4rem;
-        }
-
-        &-item {
-            @include gap(2.4rem, 3);
-            font-size: 1.4rem;
-            font-weight: 500;
-
-            @include hover {
-                color: $color-third !important;
-
-                i {
-                    color: $color-third !important;
-                }
-            }
-
-            &.current-menu-item {
-                color: $color-third !important;
-
-                i {
-                    color: $color-third !important;
-                }
-            }
-        }
-
-        &-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-
-            .text {
-                transition: var(--transition);
-            }
-
-            i {
-                width: 3.2rem;
-                height: 3.2rem;
-                border-radius: 100rem;
-                background-color: $color-pri;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $color-white;
-               
-            }
-        }
+    &:not(:last-child) {
+      &::after {
+        @include pseudo;
+        bottom: 0;
+        left: 4rem;
+        right: 4rem;
+        height: 0.1rem;
+        background-color: $color-border-01;
+      }
     }
+  }
+
+  &-left {
+    width: calc((4 / 12 * 100%) - (2.4rem - (2.4rem / 2)));
+  }
+
+  &-right {
+    width: calc((8 / 12 * 100%) - (2.4rem - (2.4rem / 2)));
+  }
+
+  &-content {
+    @include flex-wr;
+    gap: 1.6rem;
+
+    .icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 100rem;
+      background-color: $color-pri;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: $color-white;
+      }
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      transition: var(--transition);
+
+      @include hover {
+        color: $color-third;
+      }
+    }
+
+    .des {
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+  }
+
+  &-menu {
+    &-list {
+      @include flex-wr;
+      gap: 2.4rem;
+    }
+
+    &-item {
+      @include gap(2.4rem, 3);
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      @include hover {
+        color: $color-third !important;
+
+        i {
+          color: $color-third !important;
+        }
+      }
+
+      &.current-menu-item {
+        color: $color-third !important;
+
+        i {
+          color: $color-third !important;
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .text {
+        transition: var(--transition);
+      }
+
+      i {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 100rem;
+        background-color: $color-pri;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-white;
+        flex-shrink: 0;
+      }
+    }
+  }
 }

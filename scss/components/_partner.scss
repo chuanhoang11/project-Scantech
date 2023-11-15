@@ -1,6 +1,6 @@
 .partner {
-  margin-top: -15rem;
-  padding-bottom: 33.3rem;
+  // margin-top: -15rem;
+  padding: 4rem 0;
   @include max(1500px) {
     margin-top: 0;
     padding: 4rem 0;
@@ -23,8 +23,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // margin: 0 -1.2rem;
-    // margin-bottom: -2.4rem;
+    margin: 0 -1.2rem;
+    margin-bottom: -2.4rem;
     width: 100%;
   }
   &-item {

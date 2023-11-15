@@ -1,25 +1,32 @@
 .sec-about {
-  background: linear-gradient(
-    0deg,
-    #f4f4f4 55.33%,
-    rgba(217, 217, 217, 0) 100%
-  );
-  background-image: url("../../assets/images/bg_banner.png");
-  //   height: 149.2422rem;
-  min-height: 70.367vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 8rem 0;
 }
 
 .about {
-  .container {
-    max-width: 172.8rem;
+  min-height: calc((882 / 1408) * 100vw);
+  position: relative;
+  padding: 8rem 0;
+  &-br {
+    background: linear-gradient(
+      0deg,
+      #f4f4f4 55.33%,
+      rgba(217, 217, 217, 0) 100%
+    );
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    // z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &-content {
     margin: 0 auto;
-    margin-top: -25rem;
+    // margin-top: -25rem;
     // width: 140.8rem;
     // height: 88.2rem;
     min-height: calc(882 / 1408 * 100vw);
@@ -33,20 +40,16 @@
     }
     // transform: translateX(50%);
     &-text {
-      position: absolute;
-      transform: translate(-6%, -39%);
-      top: 50%;
-      left: 50%;
-      @include max(940px) {
-        transform: translate(-50%, -39%);
-      }
-      @include max(867px) {
-        transform: translate(-38%, -39%);
-      }
-      @include max(500px) {
-        transform: translate(-47%, -50%);
-      }
+      padding: 30rem 0rem 0 65rem;
     }
+  }
+  &-wrap {
+    min-height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &-bg {
     // padding-top: calc(882 / 1408 * 100vw);
@@ -56,7 +59,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-
+    z-index: 2;
     flex-shrink: 0;
     img {
       width: 100%;
@@ -103,7 +106,7 @@
     }
   }
   &-text {
-    width: 50rem;
+    // width: calc(100% - 23rem);
     font-size: 6.4rem;
     font-weight: 700;
     color: $color-white;
@@ -117,7 +120,7 @@
     }
   }
   &-subTitle {
-    width: 40rem;
+    width: calc(100% - 23rem);
     color: $color-white;
     font-size: 1.6rem;
     font-weight: 400;

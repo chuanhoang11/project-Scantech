@@ -15,7 +15,7 @@ export default function bannerSwiper() {
         500: {
           slidesPerView: 3,
         },
-        620: {
+        621: {
           slidesPerView: 4,
         },
       },
